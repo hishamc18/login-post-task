@@ -18,7 +18,7 @@ model Post {
   id        Int      @id @default(autoincrement())
   title     String
   content   String
-  createdAt DateTime @default(now()) // ✅ add this line
+  createdAt DateTime @default(now())
   userId    Int
   user      User     @relation(fields: [userId], references: [id])
 }

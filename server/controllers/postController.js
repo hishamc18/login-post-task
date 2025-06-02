@@ -1,6 +1,9 @@
 import { createPost, getPostsByUser } from '../services/postService.js';
+import { login } from './userController.js';
 
 export const addPost = async (req, res, next) => {
+  console.log(req.body);
+  
   try {
     const { title, content } = req.body;
     const post = await createPost(title, content, req.user.id);

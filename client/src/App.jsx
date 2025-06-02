@@ -7,6 +7,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
+import NotFoundPage from "./pages/NotFoundPage";
 import { checkAuth } from "./redux/slices/userSlice";
 import './App.css'
 
@@ -24,6 +25,7 @@ function App() {
       <Routes>
         <Route path="/login" element={!isAuthenticated ? <LoginPage /> : <Navigate to="/" />} />
         <Route path="/" element={isAuthenticated ? <HomePage /> : <Navigate to="/login" />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
   );

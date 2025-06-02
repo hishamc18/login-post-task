@@ -2,6 +2,8 @@ import axiosInstance from '../axios/axiosInstance';
 
 const createPost = async ({ title, content }) => {
   const res = await axiosInstance.post('/posts', { title, content });
+  console.log(res);
+  
   return res.data;
 };
 

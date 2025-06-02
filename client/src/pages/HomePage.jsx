@@ -11,7 +11,7 @@ export default function HomePage() {
   const navigate = useNavigate();
   const { posts } = useSelector((state) => state.post);
   const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
+  const [content, setContent] = useState('');  
   const [expanded, setExpanded] = useState(null);
 
   useEffect(() => {
